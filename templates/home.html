@@ -2,13 +2,21 @@
 <html>
 <head>
     <title>Home page</title> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
 </head>
 <body>
-    <h1>Welcome to the home page.</h1>
+    
     <div>
-        <a href="{{ url_for('dr_stone') }}">
-        <button>Click me </button>
+        <a href="{{ url_for('signup') }}">
+            <button>Sign up</button>
         </a>
+        <a href="{{ url_for('login') }}">
+            <button>Login</button>
+        </a>
+            <form>
+                <label for="search">Search</label>
+                <input type="search" id="search" placeholder="Search">
+            </form>
     </div>
 </body>
 </html>

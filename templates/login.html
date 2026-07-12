@@ -2,18 +2,25 @@
 <html>
 <head>
     <title>Login</title> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Welcome to the login.</h1>
-    <p>Welcome Back</p>
+    <div class="login-card">
+        <h1>Welcome to the login.</h1>
+        <p>Welcome Back</p>
 
-    <label for ="email">Email</label>
-        <input type = 'text' id = "email" placeholder="Email" >
+        <form>
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Email">
 
-        <label for ="password">Password</label>
-            <input type = 'text' id = "password" placeholder="password" >
-       <button>Log in</button>
-       <a href="{{ url_for('signup') }}">Sign up</a>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password">
+            
+            <button type="submit">Log in</button>
+        </form>
+
+        <a href="{{ url_for('signup') }}">Sign up</a>
+    </div>
     
 </body>
 </html>

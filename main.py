@@ -5,19 +5,19 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return render_template("home.html")
-
-
-@app.route("/dr_stone")
-def dr_stone():
-    return render_template("drstone.html")
-
+ 
 @app.route("/login")
 def login():
     return render_template("login.html")
 
+
 @app.route("/signup")
 def signup():
     return render_template("signup.html")
+
+@app.route("/Dr.stone")
+def drstone():
+    return render_template("drstone.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
